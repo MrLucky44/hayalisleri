@@ -1,0 +1,31 @@
+{% extends "layout/base.html" %}
+{% load static %}
+
+{% block title %}Journey Blogs{% endblock title %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'blog/css/index	.css' %}">
+{% endblock css_files%}
+
+
+{% block content %}
+	<section id="journey">
+		<div class="container">
+					<div class="resims"><a href="{% url 'blog_by_category' 'abroad'%}"><img class="img-fluid" src="{% static 'blog/img/abroad.png' %}"><p>Abroad</p></a></div>
+					<div class="resims"><a href="{% url 'blog_by_category' 'domestic'%}"><img class="img-fluid" src="{% static 'blog/img/domestic.png' %}"><p>Domestic</p></a></div>
+				</div>
+	</section>
+{% endblock content %}
+
+{% comment %} <head>
+<meta charset="UTF-8">
+<title>Hayal İşleri</title>
+	<link href="../styles/stylesheet.css" rel="stylesheet" type="text/css">
+	<link rel="shortcut icon" href="Journey Blogs/images/Studio Projesi final kesin net 5.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com"> 
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Pacifico&display=swap" rel="stylesheet">
+	<link href="../fonts/stylesheet.css" type="text/css" rel="stylesheet">
+	<link href="../styles/pagesstylesheet.css" type="text/css" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/3b61ca7ff3.js" crossorigin="anonymous"></script>
+</head> {% endcomment %}

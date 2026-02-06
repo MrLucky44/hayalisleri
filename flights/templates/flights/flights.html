@@ -1,0 +1,28 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+
+{% block css_files %}
+	<link href=" {% static 'flights/css/flights.css' %} " rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'blog/css/journey_blog.css' %}">
+{% endblock css_files %}
+
+
+{% block content %}
+<section id="main">
+	<h2 class="h2">MAURIS VULPUTATE DOLOR</h2>
+	<p>FEUGIAT SED LOREM IPSUM MAGNA</p>
+	<div class="kapsayici">
+		{% for flight in flights %}
+			<div class="flight">
+				<div class="flightimage"><img src="{% static 'layout/img/flights.png' %}"></div>
+				<div class="flightarticle">
+					<h3>LOREM IPSEUM</h3>
+						<p>Dolorum aspernatur maxime libero</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non ea mollitia corporis id, distinctio sunt veritatis officiis dolore reprehenderit deleniti voluptatibus harum magna, doloremque alias</p>
+				</div>
+			</div>
+		</div>
+		{% endfor %}
+</section>
+
+{% endblock content %}

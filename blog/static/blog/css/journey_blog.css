@@ -1,0 +1,254 @@
+/**-----Abroad and Domestic-----***/
+#main{
+        width: 100%;
+        text-align: center;
+		background-size: cover;
+		/* height: 100vh; */
+		/* position: relative; */
+		margin: 0 auto;
+}
+
+body{background: linear-gradient(135deg, rgba(217,200,58,0.8) 0%,rgba(217,200,58,0.9) 15%,rgba(35,146,157,0.8) 30%,rgba(35,146,157,0.8) 33%,rgba(35,146,157,0.8) 66%,rgba(35,146,157,0.8) 70%,rgba(217,200,58,0.8) 85%,rgba(217,200,58,0.9) 100%);
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+*{
+    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Montserrat', sans-serif; */
+}
+
+h3 {position: relative;
+	top:-10px;}
+
+.h2{color: darkorange;
+	display: block;
+	position: relative;
+	right: 180px;}
+#main h2{
+		margin-bottom: 20px;
+		font-size:50px;
+		font-weight: 600;
+		color:#111111;
+		text-align: center;}
+
+#main h2+p {
+		margin-bottom: 20px;
+		font-size: 25px;
+		font-weight: 400;
+		font-style: italic;	
+		color:#111111;}
+
+.kapsayici{
+		width: 1000px;
+		margin: auto;
+		padding-top:50px;
+}
+.flight{
+		width: 970px;
+		float: left;
+		padding: 30px;
+		margin: 5px 0px;
+		border: 2px dashed #FFF7F7;
+		border-radius: 10px;}
+.flightimage img {
+		width: 150px;
+		float: left;
+		margin-right: 20px;
+}
+
+.flightarticle{
+		text-align: left;
+		margin-top: 0px;}
+
+
+.flightarticle h3 {
+		margin-bottom: 20px;
+		font-size:24px;
+		font-weight: 600;
+		color:#111111; }
+
+.flightarticle h3+p{
+		margin-bottom: 20px;
+		font-size: 20px;
+		font-weight: 400;
+		font-style: italic;	
+		color:#111111;
+}
+
+.flightarticle p+p {
+		font-size:18px;
+		font-weight: 200;
+		color:#111111;
+}
+
+.flightimage{margin: 0 15px;}
+		
+header{
+	width: 100%;
+	height: 250px;
+}
+
+.flightarticle a {
+text-decoration: none;
+padding: 5px 8px;
+color: darkorange;
+display: inline-block;
+float: right;
+font-size: 18px;
+transition: 0.2s;}
+
+.flightarticle i{
+	display: inline-block;
+	float: right;
+	padding-top: 3px;
+	color:azure;
+}
+
+.flightarticle a:hover{
+	letter-spacing:1px;
+	text-decoration: underline;
+}
+
+.flightarticle a:visited{color:red;}
+
+.flightarticle a:link{color:darkorange;}
+
+/**-----JourneyBlogs-----***/
+
+#journey{
+	width: 100%;
+	text-align: justify;
+	position: relative;
+	background-size: cover; 
+	margin: 0 auto;
+		}
+.resims{position: relative;
+			margin: 0 auto;
+	right:50px;
+}
+
+.resims img { 
+	display:block;
+  	width: 600px; 
+	position: relative;
+	}
+
+.genel{position: relative;
+		margin: 0 auto;
+		width: 1000px;}
+
+.genel:nth-child(2){float: left;}
+
+.resims a{
+			display: block;
+			text-decoration: none;
+			padding: 5px 5px;
+			color: darkorange;
+			float: left;
+			font-size: 30px;
+			transition: 0.2s;
+			font-weight: 900;
+			
+			}
+
+.resims a:hover{
+	background: rgba(35,146,157,0.6);}
+
+/**-----Flights-----***/
+
+#api{
+	width: 100%;
+	height: 1000px;
+	margin: 0 auto;
+	padding: 0px;}
+
+/**-----General-----***/
+
+footer .social a:hover{
+	border-radius: 100%;
+	box-shadow: 5px 5px 12px rgba(217,200,58);
+	width: 45px;
+	height: 45px;
+}
+
+/**-----Blank-----**/
+
+
+.mainsection{
+	width: 100%;
+	margin: 0 auto;
+	text-align: left;
+	float: left;
+	
+}
+
+
+.kapsayiciblank h2{
+    font-size: 40px;
+    font-weight: 700;
+    color: darkorange;
+	letter-spacing: 1px;
+	margin-bottom: 30px;
+}
+
+.kapsayiciblank h2+p{
+    margin: 0 ;
+    font-size: 30px;
+    font-weight: 300;
+	font-style: italic;
+	margin-bottom: 25px;
+	color: azure;
+	text-align: left;
+    }
+
+
+.kapsayiciblank{
+	padding: 0px; 
+	width: 1000px;
+	margin: auto;
+	
+}
+
+.images{
+		float: left;
+		width:1200px;
+		height:400px;
+		background: #F70004;
+		margin-bottom: 10px;
+}
+
+
+.makale{
+	width: 1200px;
+	height:600px;
+	background: #0039FF;
+	margin-bottom: 10px;
+	float: left;
+}
+	
+
+.rate{
+	width: 1200px;
+	height: 300px;
+	background: #1DD75D;
+	float: left;}
+
+
+.blogs_images {
+	width: 1000px;
+	margin-top: 75px;
+	margin-bottom: 75px;
+	padding: 75px;
+
+}
+
+
+.w-100 {
+	/* width: 100% !important; */
+	/* height: 75vh; */
+}
+
+/* .carousel-inner > .item > img {
+    width: 100%;
+} */

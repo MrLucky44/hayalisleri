@@ -1,0 +1,86 @@
+#main {
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.kapsayici {
+    width: 1000px;
+    padding: 50px;
+    margin: 20 200px;
+}
+
+.flight {
+    width: 900px;
+    float: left;
+    padding: 50px;
+    background: #fff;
+    border: 5px solid;
+}
+
+.flightimage img {
+    width: 150px;
+    float: right;
+    padding: -40px 0;
+}
+
+.header {
+    width: 100%;
+    height: 120px;
+    padding-bottom: 20px;
+}
+
+.header h1 p {
+    display: block;
+    text-align: center;
+    margin: 118px 0;
+    float: left;
+    font-size: 15px;
+    font-weight: 100;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+}
+
+.header h1 a img {
+    width: 120px;
+    height: 120px;
+    float: left;
+    margin: 20px 0px 0px 40px;
+    padding: 0;
+}
+
+.header ul {
+    list-style: none;
+    position: relative;
+    float: right;
+    right: 40px;
+}
+
+.header ul li {
+    display: block;
+    padding: 60px 30px;
+    float: left;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+}
+
+.header {
+    position: sticky;
+    top: -20px;
+}
+
+.header ul li a {
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: 1.2px;
+    text-align: center;
+    text-transform: capitalize;
+    transition: .2s;
+    text-decoration: none;
+    color: darkorange;
+}
+
+.header ul li a:hover {
+    color: rgba(35,146,157,1);
+}

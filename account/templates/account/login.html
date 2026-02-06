@@ -1,0 +1,40 @@
+{% extends "layout/base.html" %}
+{% load static %}
+
+{%block title %} Login {%endblock%}
+
+{% block css_files %}
+	<link rel="stylesheet" href="{% static 'blog/css/journey_blog.css' %}">
+	<link rel="stylesheet" href="{% static 'account/css/account.css' %}">
+{% endblock css_files %}
+
+
+{% block content %}
+    <div class="container mt-3 login">
+        <div class="col">
+		<div class="as">
+            <h1>Login <span style="font-size:18px;">Giriş yap</span></h1>
+            <hr>
+
+            <form method="POST">
+                {% csrf_token %}
+                {% if error %}
+                    <div class="alert alert-danger">
+                        {{error}}
+                    </div>
+                {% endif %}
+                <div class="mb-3">
+                    <label for="username" class="form-label" style="font-size:20px;">Username <span style="font-size:12px;">Kullanıcı adınız</span></label>
+                    <input type="text" class="form-control" name="username" placeholder="hayal@gmail.com" style="background:rgba(35,146,157,0.3);">
+                </div>
+                <div class="mb-3"><label style="font-size:20px;">
+                    Password <span style="font-size:12px;">Şifreniz</span></label>
+                    <input type="password" class="form-control" name="password" placeholder="******" style="background:rgba(35,146,157,0.3);">
+                </div>
+                <input style="height: 30px; width: 75px; border-radius: 5px; background:rgba(217,200,59,1);" type="submit" value="Login" class="btn-primary">
+            </form>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

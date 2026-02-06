@@ -1,0 +1,35 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+
+{% block css_files %}
+	<link rel="stylesheet" href="{% static 'blog/css/journey_blog.css' %}">
+{% endblock css_files %}
+
+{% block content %}
+<section id="main">
+	<h2 class="h2" style="color: darkorange;">{{selected_category|title}} Blogs</h2>
+	{% if selected_category|title == 'Abroad' %}
+	<h3 style="position: relative;
+	top:-20px;">Yurt dışı Blogları</h3>
+	{% else %}
+		<h3 style="position: relative;
+	top:-20px;">Yurt içi Blogları</h3>
+	{% endif %}
+	<p style="font-size: 20px; font-weight: bolder; margin-top:25px; ">Interesting and Beneficial Trip Blogs by Hayal<br><span style="font-size:16px; font-weight: 400;">Hayalden İlginç ve yararlı gezi blogları</span></p>
+	<div class="kapsayici">
+		{% for blog in blogs %}
+			<div class="flight">
+				{% if blog.image_one %}
+				<div class="flightimage"><img style="height: auto;" src="{{ blog.image_one.url }}"></div>
+				{% endif %}
+				<div class="flightarticle">
+				<h3>{{ blog.title|title }}</h3>
+					<p>{{ blog.description|safe|striptags|slice:":200"|add:"..." }}</p>
+					<a href="{% url 'blog_details' blog.slug %}">Read more</a>
+					<i class="fa-solid fa-book-open" ></i>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+</section>
+{% endblock content %}

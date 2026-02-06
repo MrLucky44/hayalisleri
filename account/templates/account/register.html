@@ -1,0 +1,56 @@
+{% extends "layout/base.html" %}
+{% load static %}
+
+{%block title %} Register {%endblock%}
+
+{% block css_files %}
+	<link rel="stylesheet" href="{% static 'blog/css/journey_blog.css' %}">
+	<link rel="stylesheet" href="{% static 'account/css/account.css' %}">
+{% endblock css_files %}
+
+{% block content %}
+    <div class="container mt-3">
+		<div class="as">
+        <h1>Register <span style="font-size:18px;">Kayıt ol</span></h1>
+			<hr>
+        <form method="POST">
+            {% csrf_token %}
+            {% if error %}
+                <div class="alert alert-danger">
+                    {{error}}
+                </div>
+            {% endif %}
+            <div class="mb-3">
+                <label for="username" class="form-label" style="font-size:20px;">Username <span style="font-size:12px;">Kullanıcı adınız</span></label>
+                <input type="text" class="form-control" name="username" value="{{username}}" placeholder="hayalisleri" style="background:rgba(35,146,157,0.3);">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label" style="font-size:20px;">Email <span style="font-size:12px;">Mail adresiniz</span></label>
+                <input type="email" class="form-control" name="email" value="{{email}}" placeholder="hayal@gmail.com" style="background:rgba(35,146,157,0.3);">
+            </div>
+            <div class="row mb-3">
+                <div class="col">
+                    <label for="firstname" class="form-label" style="font-size:20px;">First Name <span style="font-size:12px;">Adınız</span></label>
+                    <input type="text" class="form-control" name="firstname" value="{{firstname}}" placeholder="hayal" style="background:rgba(35,146,157,0.3);">
+                </div>
+                <div class="col">
+                    <label for="lastname" class="form-label" style="font-size:20px;">Last Name <span style="font-size:12px;">Soyadınız</span></label>
+                    <input type="text" class="form-control" name="lastname" value="{{lastname}}" placeholder="isleri" style="background:rgba(35,146,157,0.3);">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col">
+                    <label for="password" class="form-label" style="font-size:20px;">Password <span style="font-size:12px;">Şifreniz</span></label>
+                    <input type="password" class="form-control" name="password" placeholder="******" style="background:rgba(35,146,157,0.3);">
+                </div>
+                <div class="col">
+                    <label for="repassword" class="form-label" style="font-size:20px;">Re-Password <span style="font-size:12px;">Şifrenizi yeniden girin</span></label>
+                    <input type="password" class="form-control" name="repassword" placeholder="******" style="background:rgba(35,146,157,0.3);">
+                </div>
+            </div>
+            <input style="height: 30px; width: 75px; border-radius: 5px; background:rgba(217,200,59,1);" type="submit" value="Register" class="btn-primary">
+        </form>
+    </div>
+</div>
+{% endblock %}

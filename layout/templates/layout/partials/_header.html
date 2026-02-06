@@ -1,0 +1,36 @@
+{% load static %}
+<span id="span">Welcome❤️&nbsp;{{ user.get_full_name|title }}</span>
+<marquee scrollamount="6">Hayalisleri.com has been in service from 1 February.&nbsp;🎊&nbsp;🥳&nbsp;🎉&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Hayalisleri.com 1 Şubat'tan itibaren hizmettedir.&nbsp;🎊&nbsp;🥳&nbsp;🎉</marquee>
+	
+<img src="../../../static/layout/img/output-onlinegiftools (1).gif" style="width: 130px; position: absolute; left:200px; top:-10px;">
+		<img style="width:100px; top:24px; position:absolute; left:165px; " src="../../../static/layout/img/party-popper_1f389.gif">
+<header class="upper">
+	<h1>
+		<a href="{% url 'home' %}"><img rel="icon" src="{% static 'layout/img/icon.png' %}" alt="logo"></a><p>&nbsp; Templated by Hayal</p></h1>
+
+  <nav>
+		<ul id="dis">
+			<li><a href="{% url 'home' %}">Home</a></li>
+			{% comment %} <li><a href="{% url 'flights.index' %}">Flights</a> </li> {% endcomment %}
+			<li><a href="{% url 'blog_index' %}">Journey Blogs</a>
+				<ul id="ic">
+					{% for category in categories %}
+						<li><a href="{% url 'blog_by_category' category.slug %}">{{category.name|title}}</a></li><br>
+					{% endfor %}
+				</ul>
+			</li>
+			<li><a href="##"><i class="fa-solid fa-user"></i></a>
+				<ul id="login">
+					{% if user.is_authenticated %}
+						<li style="	position: relative; left: 40px; float: right; padding-top: 15px; text-align: left;">
+							<a href="{% url 'logout' %}">Logout&nbsp;<i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+						</li><br>
+					{% else %}
+						<li> <a href="{% url 'login' %}" class="nav-link">Login&nbsp;<i class="fa-solid fa-right-to-bracket"></i></a></li><br>
+						<li> <a href="{% url 'register' %}" class="nav-link">Register</a></li><br>
+					{% endif %}
+				</ul>
+			</li>
+		</ul>
+	</nav>
+</header>

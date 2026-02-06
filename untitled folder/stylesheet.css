@@ -1,0 +1,135 @@
+*{	
+margin: 0;
+padding: 0;
+}
+
+.wrapper{width: 99%;
+		margin-top: 5px;}
+
+.container{
+	display: flex;
+	max-width: 1000px;
+	margin: 0 auto;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+
+header{
+	width: 100%;
+	height: 100px;
+	background:rgba(0,0,0,1.00);
+}
+
+.section1{
+	display: flex;
+	width: 100%;
+	align-items: flex-start;
+	flex-direction: row;
+}
+
+.slider{
+		width: 750px;
+		background: rgba(0,214,255,1.00);
+		margin: 5px 0 5px 0;
+		flex-grow: 1;
+		flex-shrink: 2;
+		height: 300px;
+}
+
+
+aside{
+	display: flex;
+	width: 250px;
+	flex-direction: row;
+	flex-wrap: wrap;
+	flex-grow: 1;
+	flex-shrink: 1;
+	margin-left: 5px;
+	margin-top: 5px;
+	height: 300px;
+}
+
+aside .box{
+	background: rgba(221,11,208,1.00);
+	flex-basis: 100%;
+	margin-bottom: 5px;
+	height: 95px;
+}
+
+
+aside .box:nth-last-child(1){margin-bottom:0px;}
+
+.section2{
+	display: flex;
+	flex-direction: row;
+	width:100%;
+	align-items: flex-start;
+	height: 300px;}
+
+#box {
+	flex: 1 1 250px;
+	background: rgba(191,16,19,1.00);
+	margin-left: 5px;
+	align-self: stretch;
+}
+
+footer {
+	display: flex;
+	width: 100%;
+	height: 200px;
+	margin-top: 5px;
+	background: rgba(255,0,4,1.00);
+	padding-left: 10px;
+	padding-top: 5px;
+	text-align:left;
+	box-sizing: border-box;}
+
+@media screen and (max-width:780px){
+	.wrapper{margin-left: 5px;}
+	.section1{flex-direction: column;}
+	.section2{margin-top: 35px;}
+	.slider{width: 100%;}
+	aside{
+		flex-direction: row;
+		flex-wrap: nowrap;
+		width: 100%;
+		height: 65px;
+		margin: 0px;
+		}
+	
+	.box{height:40px;
+	margin-right: 5px;}
+	
+	footer{height: auto;}
+	aside .box:nth-child(3){margin-right:0px;}
+	
+}
+
+@media screen and (max-width:500px){
+	#box{display: none;}
+	.wrapper{margin: 0 auto;}
+	aside {
+		flex-direction: column;
+		height: 150px;
+
+	}
+	aside .box:nth-child(n+1){margin-right:0px;}
+		
+	.box{align-self: stretch;}
+	
+	.section2{margin-top: 5px;}
+	
+	
+	
+}
+
+@media screen and (max-height:500px){
+	header{display: none;}
+	.section1{display: none;}
+	.section2{display: none;}
+}
+
+
+
+
+
