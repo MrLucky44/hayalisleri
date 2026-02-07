@@ -1,7 +1,7 @@
 from django.shortcuts import render 
 from blog.models import Category
 
-# Create your views here.
+# Create your views heregggg.
 
 def index(request):
     context = {
