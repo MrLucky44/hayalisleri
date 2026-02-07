@@ -21,7 +21,7 @@
 
 <body>
     <!-- Header -->
-    <span id="span">Welcome❤️&nbsp;</span>
+    <span id="span">Welcome❤️&nbsp;{{ user.get_full_name|title }}</span>
     <marquee scrollamount="6">Hayalisleri.com has been in service from 1 February.&nbsp;🎊&nbsp;🥳&nbsp;🎉&nbsp; &nbsp;
         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Hayalisleri.com 1 Şubat'tan itibaren hizmettedir.&nbsp;🎊&nbsp;🥳&nbsp;🎉
     </marquee>
@@ -33,13 +33,13 @@
 
     <header class="upper">
         <h1>
-            <a href="index1.html"><img rel="icon" src="{% static 'layout/img/icon.png' %}" alt="logo"></a>
+            <a href="{% url 'home' %}"><img rel="icon" src="{% static 'layout/img/icon.png' %}" alt="logo"></a>
             <p>&nbsp; Templated by Hayal</p>
         </h1>
 
         <nav>
             <ul id="dis">
-                <li><a href="index1.html">Home</a></li>
+                <li><a href="{% url 'home' %}">Home</a></li>
                 <li><a href="blog.html">Journey Blogs</a>
                     <ul id="ic">
                         <li><a href="{% url 'blog_by_category' 'domestic' %}">Domestic</a></li><br>
@@ -48,9 +48,14 @@
                 </li>
                 <li><a href="##"><i class="fa-solid fa-user"></i></a>
                     <ul id="login">
+                        {% if user.is_authenticated %}
+                        <li><a href="{% url 'logout' %}" class="nav-link">Logout&nbsp;<i
+                                    class="fa-solid fa-arrow-right-from-bracket"></i></a></li><br>
+                        {% else %}
                         <li><a href="{% url 'login' %}" class="nav-link">Login&nbsp;<i
                                     class="fa-solid fa-right-to-bracket"></i></a></li><br>
                         <li><a href="{% url 'register' %}" class="nav-link">Register</a></li><br>
+                        {% endif %}
                     </ul>
                 </li>
             </ul>
@@ -249,7 +254,7 @@
                 <a href="https://twitter.com/hayal_isleri" title="Linkedin" target="_blank"></a>
             </div>
             <ul>
-                <li><a href="index1.html">Hayal İşleri&nbsp;</a></li>
+                <li><a href="{% url 'home' %}">Hayal İşleri&nbsp;</a></li>
                 <li>
                     <p>&nbsp;Templated by Hayal&nbsp;&nbsp;</p>
                 </li>
